@@ -1,0 +1,44 @@
+@use "../base/base" as c;
+
+.logo {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__img {
+    position: relative;
+    content: "";
+    width: 3.7rem;
+    height: 3.7rem;
+  }
+
+  &__part {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 0.3rem;
+    border-bottom-right-radius: 3rem;
+
+    &--green {
+      background-color: c.$color-primary;
+      top: 0.4rem;
+      left: 0.4rem;
+    }
+
+    &--orange {
+      background-color: c.$color-secondary;
+    }
+  }
+
+  &__name {
+    color: c.$color-black;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}

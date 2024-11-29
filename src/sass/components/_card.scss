@@ -1,0 +1,58 @@
+@use "../base/base" as c;
+
+.card {
+  &__img-container {
+    position: relative;
+  }
+
+  &__img {
+    border-radius: 1.5rem;
+    width: 30rem;
+    height: 30rem;
+  }
+
+  &__extra-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  &__extra {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    padding: 0.5rem 2rem;
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    &--red {
+      background-color: c.$color-danger-light;
+      color: c.$color-danger;
+    }
+
+    &--blue {
+      background-color: c.$color-info-light;
+      color: c.$color-info;
+    }
+
+    &--green {
+      background-color: c.$color-primary-light;
+      color: c.$color-primary;
+    }
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: c.$color-black;
+    margin-top: 1rem;
+  }
+
+  &__price {
+    font-size: 1.4rem;
+    color: c.$color-gray-3;
+  }
+}

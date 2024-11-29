@@ -1,0 +1,328 @@
+@use "../base/base" as c;
+
+.btn-main {
+  font-size: 1.3rem;
+  display: block;
+  background-color: c.$color-primary;
+  color: c.$color-white;
+  padding: 1.4rem 2.7rem;
+  border-radius: 10rem;
+  border: none;
+  font-weight: 500;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: c.$color-primary-dark;
+    cursor: pointer;
+  }
+}
+
+.nav-btn {
+  border: 1px solid #fff;
+  padding: 0.5rem 2.7rem;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 400;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translateY(0.4rem);
+    cursor: pointer;
+  }
+}
+
+.sign-up-btn {
+  background-color: c.$color-primary-light;
+  color: c.$color-primary-dark;
+  font-weight: 600;
+  font-size: 1.6rem;
+  border: 1px solid c.$color-primary-dark;
+  padding: 1.5rem 3.2rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(0.4rem);
+    cursor: pointer;
+  }
+}
+
+.input {
+  border: 1px solid c.$color-gray-1;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 3rem;
+}
+
+.white-btn {
+  background-color: #fff;
+  color: c.$color-primary;
+  padding: 1.2rem 2.5rem;
+  border-radius: 10rem;
+  border: 1px solid c.$color-primary;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  &:hover,
+  &--active {
+    border: none;
+    background-color: c.$color-primary-light;
+    border: 1px solid c.$color-primary-light;
+
+    cursor: pointer;
+  }
+}
+
+.extra {
+  color: c.$color-secondary;
+  font-size: 1.2rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 3.2rem;
+    height: 1px;
+    background-color: c.$color-secondary;
+    position: absolute;
+    top: 0.3rem;
+    left: -4rem;
+  }
+
+  &--middle {
+    &::before {
+      top: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.rounded-btn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: c.$color-primary;
+  border: 1px solid c.$color-primary;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: c.$color-primary-light;
+  }
+
+  &--active {
+    background-color: c.$color-primary;
+
+    &:hover {
+      background-color: c.$color-primary-dark;
+    }
+  }
+}
+
+.line {
+  width: 80%;
+  height: 1.5px;
+  background-color: c.$color-gray-1;
+  margin: 2rem 0;
+}
+
+.rounded-box {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10rem;
+  padding: 1.4rem 2rem;
+  border: 1px solid c.$color-gray-1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  &--subscribe {
+    width: 45%;
+  }
+
+  &--error {
+    border: 1px solid c.$color-danger;
+  }
+
+  &__input {
+    border: none;
+    width: calc(100% - 2rem - 2.8rem - 14rem);
+    font-size: 1.4rem;
+    &::placeholder {
+      color: c.$color-gray-2;
+      font-weight: 500;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  &__btn-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  margin-top: 0.1rem;
+  background-color: #fff;
+  height: 2rem;
+  width: 2rem;
+  font: inherit;
+  color: c.$color-primary;
+  border: 1px solid c.$color-primary;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:checked {
+    background-color: c.$color-primary;
+  }
+
+  &:checked::before {
+    content: "\2713";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+    color: #fff;
+  }
+}
+
+#message {
+  resize: none;
+}
+
+.custom-select {
+  font-size: 1.3rem;
+  color: c.$color-gray-2;
+  font-weight: 300;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &--articles {
+    font-size: 1.6rem;
+    border: 1px solid #fff;
+    padding: 0.5rem 2.7rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 400;
+    transition: all 0.2s;
+    color: #fff;
+  }
+
+  &__options {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    border: 1px solid c.$color-gray-1;
+    border-top: none;
+    border-radius: 2rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0rem;
+    display: none;
+    z-index: 2;
+    color: c.$color-black;
+
+    &--article {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    &--active {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2rem;
+      left: -1px;
+      width: 1px;
+      height: 3rem;
+      background-color: c.$color-gray-1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -2rem;
+      right: -1px;
+      width: 1px;
+      height: 3rem;
+      background-color: c.$color-gray-1;
+    }
+  }
+
+  &__option {
+    padding: 1rem 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 3rem;
+    font-size: 1.3rem;
+
+    &:hover {
+      background-color: c.$color-primary-light;
+    }
+
+    &--selected {
+      background-color: c.$color-primary-light;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
