@@ -2,6 +2,10 @@ import { data } from "../data/data.js";
 const { cards, articles, testimonials } = data;
 
 const navbar = document.querySelector(".nav");
+const burgerMenu = document.querySelector(".burger__menu");
+const navLinks = document.querySelector(".nav__links");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+const dropdownBtn = document.querySelector(".nav__dropdown");
 
 const cardsContainer = document.querySelector(".cards__container");
 const cardsBtnsContainer = document.querySelector(".cards__paging");
@@ -42,6 +46,18 @@ window.addEventListener("scroll", () => {
       navbar.classList.remove("nav--scrolled");
     }
   }, 500);
+});
+
+burgerMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("nav__links--active");
+  burgerMenu.classList.toggle("burger__menu--active");
+});
+
+dropdownBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("e");
+
+  dropdownMenu.classList.toggle("dropdown-menu--active");
 });
 
 const generateTestimonial = (testimonial) => {

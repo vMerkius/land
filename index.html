@@ -26,12 +26,12 @@
         </div>
         <ul class="nav__links">
           <li>
-            <a href="#" class="nav-btn">About Us</a>
+            <a href="#about" class="nav-btn">About Us</a>
           </li>
           <li>
             <a href="#articles" class="nav-btn">Article</a>
           </li>
-          <li>
+          <li class="nav__dropdown">
             <a href="#" class="nav-btn"
               >Property
               <img
@@ -40,14 +40,29 @@
                 class="nav__arrow-down"
               />
             </a>
+            <ul class="dropdown-menu">
+              <li><a href="#html" class="dropdown-item">HTML</a></li>
+              <li><a href="#css" class="dropdown-item">CSS</a></li>
+              <li>
+                <a
+                  href="#javascript"
+                  class="dropdown-item dropdown-item--active"
+                  >JavaScript</a
+                >
+              </li>
+              <li><a href="#react" class="dropdown-item">React</a></li>
+            </ul>
           </li>
           <li>
             <button class="sign-up-btn">Sign Up</button>
           </li>
         </ul>
+        <div class="burger">
+          <div class="burger__menu"></div>
+        </div>
       </nav>
     </header>
-    <section class="hero">
+    <section id="about" class="hero">
       <div class="hero__left">
         <div class="hero__gradient"></div>
         <h1 class="hero__header">
@@ -155,7 +170,7 @@
         </div>
       </div>
     </section>
-    <section class="cards">
+    <section id="cards" class="cards">
       <p class="extra">Our Recommendation</p>
       <div class="cards__menu">
         <h2 class="cards__header">Featured House</h2>
@@ -504,21 +519,27 @@
           apartments to help people find their dream home
         </div>
         <div class="footer__logos">
-          <img
-            src="./src/img/footer-fb.png"
-            alt="Facebook"
-            class="footer__logo"
-          />
-          <img
-            src="./src/img/footer-twitter.png"
-            alt="Twitter"
-            class="footer__logo footer__logo--twitter"
-          />
-          <img
-            src="./src/img/footer-pinterest.png"
-            alt="Pintereset"
-            class="footer__logo"
-          />
+          <a href="https://www.facebook.com">
+            <img
+              src="./src/img/footer-fb.png"
+              alt="Facebook"
+              class="footer__logo"
+            />
+          </a>
+          <a href="https://www.twitter.com">
+            <img
+              src="./src/img/footer-twitter.png"
+              alt="Twitter"
+              class="footer__logo footer__logo--twitter"
+            />
+          </a>
+          <a href="https://www.pinterest.com">
+            <img
+              src="./src/img/footer-pinterest.png"
+              alt="Pintereset"
+              class="footer__logo"
+            />
+          </a>
         </div>
       </div>
 
@@ -526,26 +547,42 @@
         <div class="footer__column">
           <h4 class="footer__header">Property</h4>
           <ul class="footer__list">
-            <li class="footer__item">House</li>
-            <li class="footer__item">Villa</li>
-            <li class="footer__item">Apartment</li>
+            <li class="footer__item"><a href="#cards">House</a></li>
+            <li class="footer__item"><a href="#cards">Villa</a></li>
+            <li class="footer__item"><a href="#cards">Apartment</a></li>
           </ul>
         </div>
         <div class="footer__column">
           <h4 class="footer__header">Article</h4>
           <ul class="footer__list">
-            <li class="footer__item">New Article</li>
-            <li class="footer__item">Popular Article</li>
-            <li class="footer__item">Most read</li>
-            <li class="footer__item">Tips And Tricks</li>
+            <li class="footer__item"><a href="#articles">New Article</a></li>
+            <li class="footer__item">
+              <a href="#articles">Popular Article</a>
+            </li>
+            <li class="footer__item"><a href="#articles">Most read</a></li>
+            <li class="footer__item">
+              <a href="#articles">Tips And Tricks</a>
+            </li>
           </ul>
         </div>
         <div class="footer__column">
           <h4 class="footer__header">Contact</h4>
           <ul class="footer__list">
-            <li class="footer__item">2464 Royal Ln. Mesa, New Jersey 45463</li>
-            <li class="footer__item">(671) 555-0110</li>
-            <li class="footer__item">info@hounter.com</li>
+            <li class="footer__item">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=2464+Royal+Ln.+Mesa,+New+Jersey+45463"
+                target="_blank"
+                rel="noopener"
+              >
+                2464 Royal Ln. Mesa, New Jersey 45463</a
+              >
+            </li>
+            <li class="footer__item">
+              <a href="tel:+16715550110">(671) 555-0110</a>
+            </li>
+            <li class="footer__item">
+              <a href="mailto:info@hounter.com">info@hounter.com</a>
+            </li>
           </ul>
         </div>
       </div>

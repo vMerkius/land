@@ -22,6 +22,7 @@
 
 .nav-btn {
   border: 1px solid #fff;
+  z-index: 3;
   padding: 0.5rem 2.7rem;
   border-radius: 10rem;
   display: flex;
@@ -35,6 +36,61 @@
   &:hover {
     transform: translateY(0.4rem);
     cursor: pointer;
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  padding: 2rem 0.5rem;
+  width: 100%;
+  z-index: 5;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-top: none;
+  border-top-right-radius: none;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+
+  &--active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &::after {
+    width: 1px;
+    height: 2rem;
+    position: absolute;
+    right: -1px;
+    top: -9%;
+    content: "";
+    background-color: #fff;
+  }
+  &::before {
+    width: 1px;
+    height: 2rem;
+    position: absolute;
+    left: -1px;
+    top: -9%;
+    content: "";
+    background-color: #fff;
+  }
+}
+
+.dropdown-item {
+  font-size: 1.4rem;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  &:hover {
+    background-color: c.$color-primary;
+    border-radius: 2rem;
   }
 }
 
@@ -87,6 +143,9 @@
   color: c.$color-secondary;
   font-size: 1.2rem;
   position: relative;
+  @media only screen and (max-width: c.$bp-smallest) {
+    font-size: 1.6rem;
+  }
 
   &::before {
     content: "";

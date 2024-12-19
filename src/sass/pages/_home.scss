@@ -76,6 +76,9 @@
     @media only screen and (max-width: c.$bp-smallest) {
       width: 80%;
     }
+    @media only screen and (max-width: c.$bp-minier) {
+      width: 90%;
+    }
   }
 
   &__btn {
@@ -95,6 +98,9 @@
 
   &__logo {
     width: 10rem;
+    @media only screen and (max-width: c.$bp-mini) {
+      width: 30%;
+    }
   }
 
   &__partners-logos {
@@ -107,6 +113,9 @@
     }
     @media only screen and (max-width: c.$bp-smallest) {
       gap: 3rem;
+    }
+    @media only screen and (max-width: c.$bp-mini) {
+      flex-wrap: wrap;
     }
   }
 
@@ -281,6 +290,9 @@
     flex-direction: column;
     align-items: center;
     gap: 4rem;
+  }
+  @media only screen and (max-width: c.$bp-mini) {
+    margin-left: 5rem;
   }
 
   &__icon-details {
@@ -539,6 +551,15 @@
   @media only screen and (max-width: c.$bp-smaller) {
     padding: 10rem 5rem 0 5rem;
   }
+  @media only screen and (max-width: c.$bp-minier) {
+    padding: 10rem 2.5rem 0 2.5rem;
+  }
+
+  &__header-main {
+    @media only screen and (max-width: c.$bp-minier) {
+      width: 90%;
+    }
+  }
 
   &__gradient {
     position: absolute;
@@ -589,6 +610,9 @@
     @media only screen and (max-width: c.$bp-medium) {
       flex-direction: column;
     }
+    @media only screen and (max-width: c.$bp-minier) {
+      align-items: center;
+    }
   }
 
   &__left {
@@ -608,6 +632,9 @@
     }
     @media only screen and (max-width: c.$bp-medium) {
       width: 90%;
+    }
+    @media only screen and (max-width: c.$bp-minier) {
+      margin: 3rem 1rem 0 1rem;
     }
   }
 
@@ -639,6 +666,11 @@
     display: flex;
     gap: 3rem;
     cursor: pointer;
+    @media only screen and (max-width: c.$bp-minier) {
+      // flex-direction: column;
+      // width: 70%;
+      // margin: 0 auto;
+    }
   }
 
   &__container-small {
@@ -754,6 +786,9 @@
     @media only screen and (max-width: c.$bp-smaller) {
       width: 50%;
     }
+    @media only screen and (max-width: c.$bp-mini) {
+      width: 90%;
+    }
   }
 
   &__rounded-box {
@@ -762,7 +797,10 @@
       width: 50%;
     }
     @media only screen and (max-width: c.$bp-small) {
-      width: 60%;
+      width: 70%;
+    }
+    @media only screen and (max-width: c.$bp-mini) {
+      width: 80%;
     }
   }
 
@@ -772,6 +810,9 @@
     height: 3rem;
     border-radius: 50%;
     border: 1.5px solid #fff;
+    @media only screen and (max-width: c.$bp-mini) {
+      display: none;
+    }
 
     &--left-bottom {
       position: absolute;
@@ -804,6 +845,9 @@
     top: 3rem;
     left: 3rem;
     position: absolute;
+    @media only screen and (max-width: c.$bp-mini) {
+      display: none;
+    }
   }
 
   &__big-img {
@@ -812,11 +856,17 @@
     position: absolute;
     top: 20%;
     right: 15%;
+    @media only screen and (max-width: c.$bp-mini) {
+      display: none;
+    }
   }
   &__medium-img {
     width: 4rem;
     height: 4rem;
     position: absolute;
+    @media only screen and (max-width: c.$bp-mini) {
+      display: none;
+    }
 
     &--left {
       bottom: 15%;

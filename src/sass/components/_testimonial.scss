@@ -36,6 +36,10 @@
       width: 90%;
       bottom: -20%;
     }
+    @media only screen and (max-width: c.$bp-minier) {
+      width: 90%;
+      bottom: -50%;
+    }
   }
 
   &__text {

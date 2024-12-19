@@ -93,12 +93,20 @@
     gap: 2rem;
   }
 
+  &__item > *,
   &__item {
     font-size: 1.3rem;
     color: c.$color-gray-2;
     font-weight: 400;
+    transition: all 0.2s;
     @media only screen and (max-width: c.$bp-mini) {
       font-size: 1.5rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      transform: translateX(-0.5rem);
     }
   }
 

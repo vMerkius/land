@@ -22,6 +22,8 @@ $bp-small: 50em; // 800px;
 $bp-smaller: 43.75em; // 700px;
 $bp-smallest: 37.5em; // 600px;
 $bp-mini: 31.25em; // 500px;
+$bp-minier: 25em; // 400px;
+$bp-miniest: 21.25em; // 340px
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +39,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   @media only screen and (max-width: $bp-big) {
     font-size: 57.5%;
   }
@@ -45,6 +48,12 @@ html {
   }
   @media only screen and (max-width: $bp-smallest) {
     font-size: 47.5%;
+  }
+  @media only screen and (max-width: $bp-minier) {
+    font-size: 45%;
+  }
+  @media only screen and (max-width: $bp-miniest) {
+    font-size: 42.5%;
   }
   @media only screen and (min-width: $bp-largest) {
     font-size: 72%;
@@ -97,6 +106,9 @@ h4 {
   font-size: 1.8rem;
   color: $color-gray-2;
   font-weight: 200;
+  @media only screen and (max-width: $bp-mini) {
+    font-size: 2rem;
+  }
 }
 
 .primary-color {
