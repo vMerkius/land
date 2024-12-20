@@ -594,6 +594,7 @@ input[type=checkbox]:checked::before {
 }
 .footer__cookies {
   position: fixed;
+  z-index: 10;
   left: 50%;
   bottom: 2.5rem;
   transform: translateX(-50%);
@@ -692,7 +693,7 @@ input[type=checkbox]:checked::before {
   position: relative;
 }
 .nav--scrolled {
-  background-color: rgba(16, 185, 129, 0.98);
+  background-color: rgba(16, 185, 129, 0.8);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(1rem);
 }
